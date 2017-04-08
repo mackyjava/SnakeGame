@@ -2,6 +2,10 @@ window.onload=generarComida;
 
 
 
+var contadorPosX=0;
+var contadorPosY=0;
+
+
 document.addEventListener("keypress",desplazar, true);
 document.addEventListener("keydown",comer,true);
 function desplazar(e){
@@ -59,3 +63,23 @@ function desplazar(e){
 	 
 } 
 
+
+function comer() {
+     var comidaPosY = 
+     document.getElementById("comida").offsetLeft;
+    var comidaPosX = document.getElementById("comida").offsetTop; 
+	console.log(contadorPosY,contadorPosX,comidaPosX,comidaPosY)
+	 if(parseInt(contadorPosY)==comidaPosY&&comidaPosX==parseInt(contadorPosX)){
+		 alert("Ganaste");
+		
+	 
+	   var aleatorioComidaX=Math.floor(Math.random()*100);
+	   var aleatorioComidaY=Math.floor(Math.random()*100);
+	
+	    if ((aleatorioComidaX % 50==0) && (aleatorioComidaY % 50 == 0)){
+		   comida.style.top= aleatorioComidaX;
+	       comida.style.left= aleatorioComidaX;
+		   
+	     }
+	   }
+	 }
