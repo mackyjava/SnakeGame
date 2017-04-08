@@ -1,8 +1,3 @@
-window.onload=generarComida;
-
-	var contadorPosX=0;
-	var contadorPosY=0;
-
 document.addEventListener("keypress",desplazar, true);
 document.addEventListener("keydown",comer,true);
 function desplazar(e){
@@ -50,29 +45,3 @@ function desplazar(e){
 				
         } 
 	}
- function generarComida() {
-	 var comida =document.getElementById("comida");
-	 comida.style.top="100px";
-	 comida.style.left="100px";
-	 
-	 
-} 
-     var comidaPosY = 
-     document.getElementById("comida").offsetLeft;
-    var comidaPosX = document.getElementById("comida").offsetTop; 
- 
-function comer() {
-    
-	console.log(contadorPosY,contadorPosX,comidaPosX,comidaPosY)
-	 if(parseInt(contadorPosY)==comidaPosY&&comidaPosX==parseInt(contadorPosX)){
-		 alert("hola");
-	   var aleatorioComidaX=Math.floor(Math.random()*100)+ "px";
-	   var aleatorioComidaY=Math.floor(Math.random()*100)+ "px";
-		 
-			if((aleatorioComidaX % 50==0) && (aleatorioComidaY % 50 == 0)){
-		 comida.style.top= aleatorioComidaX;
-	    comida.style.left= aleatorioComidaY;
-	     }
-	 }
-	
-}
