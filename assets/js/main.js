@@ -1,3 +1,7 @@
+window.onload=generarComida;
+
+
+
 document.addEventListener("keypress",desplazar, true);
 document.addEventListener("keydown",comer,true);
 function desplazar(e){
@@ -45,3 +49,13 @@ function desplazar(e){
 				
         } 
 	}
+
+
+ function generarComida() {
+	 var comida =document.getElementById("comida");
+	 comida.style.top="100px";
+	 comida.style.left="100px";
+	 
+	 
+} 
+
